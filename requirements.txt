@@ -1,6 +1,8 @@
 streamlit
 langchain
+langchain-community
+langchain-core
 faiss-cpu
 pypdf
 python-dotenv
-google-generativeai
+ollama
