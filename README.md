@@ -1,72 +1,88 @@
-# 📄 Chat with PDF using RAG (Gemini AI)
+# 📄 LLM-Powered Document Copilot (RAG) — Resume Analysis System
 
 An AI-powered application that allows users to upload PDF documents and interact with them using natural language.
 
-This project uses Retrieval-Augmented Generation (RAG) with Google Gemini, LangChain, and a vector database to generate accurate, context-aware answers from custom documents.
+This project uses Retrieval-Augmented Generation (RAG) with LangChain, FAISS, HuggingFace embeddings, and Llama 3 via Ollama to generate accurate, context-aware answers — fully locally without any paid APIs.
 
----
+🚀 Features
 
-## 🚀 Features
+Upload and process PDF documents
 
-- Upload and process PDF documents
-- Semantic search using embeddings
-- Context-aware responses using Gemini
-- Fast document retrieval
+Semantic search using embeddings
 
----
+Context-aware responses using Llama 3
 
-## 🏗️ Tech Stack
+Fully local execution (no API key required)
 
-- Python  
-- LangChain  
-- Google Generative AI (Gemini)  
-- FAISS  
-- PyPDF  
-- dotenv  
+Fast document retrieval with FAISS
 
----
+Source chunk display for transparency
 
-## ⚙️ Installation
+🧠 Tech Stack
 
-```bash
-git clone https://github.com/mummadiranjithkumar/chat-with-pdf-rag.git
+Python
+
+Streamlit
+
+LangChain
+
+Ollama (Llama3:8B)
+
+HuggingFace Sentence Transformers
+
+FAISS
+
+PyPDF
+
+⚙️ Installation
+1️⃣ Clone the repository
+git clone https://github.com/your-username/chat-with-pdf-rag.git
 cd chat-with-pdf-rag
+2️⃣ Create virtual environment
+python -m venv venv
+venv\Scripts\activate
+3️⃣ Install dependencies
 pip install -r requirements.txt
+4️⃣ Install & run Ollama
 
+Download Ollama:
 
-```
+https://ollama.com
 
----
+Pull the model:
 
-## 🔑 Environment Variables
+ollama pull llama3:8b
 
-Create a `.env` file and add:
+Start Ollama:
 
-```
-GOOGLE_API_KEY=your_api_key_here
-```
+ollama serve
+5️⃣ Run the app
+streamlit run app.py
+💡 How It Works
 
----
+PDF is loaded and split into chunks
 
-## ▶️ Run the App
+Chunks are converted into embeddings
 
-```bash
-python app.py
-```
+Stored in FAISS vector database
 
----
+User query → similarity search
 
-## 🧠 How It Works
+Relevant context → sent to Llama 3
 
-1. Load PDF  
-2. Split into chunks  
-3. Convert into embeddings  
-4. Store in FAISS  
-5. Retrieve relevant chunks  
-6. Send to Gemini for answer  
+Grounded answer is generated
 
----
+📌 Requirements
 
-## 👨‍💻 Author
+Python 3.9+
 
-Ranjith Kumar
+Ollama running locally
+
+🏷️ Project Type
+
+LLM-Powered Document Q&A System using RAG (Fully Offline)
+
+👨‍💻 Author
+
+Your Name
+Ranjith kumar Mummadi
